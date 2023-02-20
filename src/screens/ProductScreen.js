@@ -1,15 +1,15 @@
-import React,{useEffect,useState} from 'react'
-import {Link} from 'react-router-dom';
-import {Row,Col,Image,ListGroup,Card,Button, Form} from 'react-bootstrap';
-import Rating from '../components/Rating';
+import React, { useEffect, useState } from 'react';
+import { Button, Card, Col, Form, Image, ListGroup, Row } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import {
-    listProductDetails,
-    createProductReview,
-  } from '../actions/productActions'
-import { PRODUCT_CREATE_REVIEW_RESET } from '../constants/productConstants'
+  createProductReview, listProductDetails
+} from '../actions/productActions';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
+import Rating from '../components/Rating';
+import { API_URL } from '../constants/orderConstants';
+import { PRODUCT_CREATE_REVIEW_RESET } from '../constants/productConstants';
 
 
 
@@ -68,7 +68,7 @@ function ProductScreen({history,match}) {
 <>
 <Row>
 <Col md={6}>
-  <Image src={product.image} alt={product.name} fluid/>
+  <Image src={`${API_URL}/${product.image}`} alt={product.name} fluid/>
 </Col>
 
 <Col md={3}>

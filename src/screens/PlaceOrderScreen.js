@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import { Button, Row, Col, ListGroup, Image, Card } from 'react-bootstrap'
+import { Button, Card, Col, Image, ListGroup, Row } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
-import Message from '../components/Message'
-import CheckoutSteps from '../components/CheckoutSteps'
+import { Link } from 'react-router-dom'
 import { createOrder } from '../actions/orderActions'
+import CheckoutSteps from '../components/CheckoutSteps'
 import Loader from '../components/Loader'
+import Message from '../components/Message'
+import { API_URL } from '../constants/orderConstants'
 
 const PlaceOrderScreen = ({history}) => {
   
@@ -89,7 +90,7 @@ const PlaceOrderScreen = ({history}) => {
                       <Row>
                         <Col md={1}>
                           <Image
-                            src={item.image}
+                            src={`${API_URL}/${item.image}`}
                             alt={item.name}
                             fluid
                             rounded

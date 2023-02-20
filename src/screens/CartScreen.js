@@ -1,9 +1,10 @@
-import React,{useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { Button, Card, Col, Form, Image, ListGroup, Row } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { addToCart, removeFromCart } from '../actions/cartActions';
 import Message from '../components/Message';
+import { API_URL } from '../constants/orderConstants';
 
 
 function CartScreen({match,location,history}) {
@@ -44,7 +45,7 @@ function CartScreen({match,location,history}) {
               <ListGroup.Item key={item.product}>
                 <Row>
                   <Col md={2}>
-                    <Image src={item.image} alt={item.name} fluid rounded />
+                    <Image src={`${API_URL}/${item.image}`} alt={item.name} fluid rounded />
                   </Col>
                   <Col md={3}>
                     <Link to={`/product/${item.product}`}>{item.name}</Link>
