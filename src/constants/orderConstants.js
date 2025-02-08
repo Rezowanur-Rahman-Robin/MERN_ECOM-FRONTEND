@@ -28,4 +28,4 @@ export const ORDER_DELIVER_SUCCESS = 'ORDER_DELIVER_SUCCESS'
 export const ORDER_DELIVER_FAIL = 'ORDER_DELIVER_FAIL'
 export const ORDER_DELIVER_RESET = 'ORDER_DELIVER_RESET'
 
-export const API_URL = "https://robshop.onrender.com/";
+export const API_URL = "https://robshop.onrender.com";
