@@ -68,7 +68,7 @@ function ProductScreen({history,match}) {
 <>
 <Row>
 <Col md={6}>
-  <Image src={`${API_URL}/${product.image}`} alt={product.name} fluid/>
+  <Image src={`${API_URL}${product.image}`} alt={product.name} fluid/>
 </Col>
 
 <Col md={3}>

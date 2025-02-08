@@ -150,7 +150,7 @@ const OrderScreen = ({ match,history }) => {
                       <Row>
                         <Col md={1}>
                           <Image
-                            src={`${API_URL}/${item.image}`}
+                            src={`${API_URL}${item.image}`}
                             alt={item.name}
                             fluid
                             rounded

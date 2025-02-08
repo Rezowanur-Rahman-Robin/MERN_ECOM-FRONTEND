@@ -9,7 +9,7 @@ function Product({product}) {
         <Card className='my-3 p-3 rounded'>
 
             <Link to={`/product/${product._id}`}>
-            <Card.Img src={`${API_URL}/${product.image}`} variant='top'/>
+            <Card.Img src={`${API_URL}${product.image}`} variant='top'/>
             </Link>
 
           
